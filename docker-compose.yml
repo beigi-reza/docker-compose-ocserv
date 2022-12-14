@@ -7,8 +7,11 @@ services:
     privileged: true
     hostname: <IPorDNS>
     ports:
+      #- "127.0.0.1:443:443/udp"    
+      #- "127.0.0.1:443:443"
       - 443:443/udp
       - 443:443
+
     volumes:
       - ./data:/etc/ocserv/data
       #- ./config/ocserv.conf:/etc/ocserv/ocserv.conf
