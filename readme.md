@@ -17,27 +17,10 @@ OpenConnect VPN server (ocserv) is an Open Source SSL VPN server. for secure and
 - Listens on port `443`
 - Tunnels DNS to the server
 
-## **To use or not to use** VALID SSL Certficate
-
-you will need an SSL certificate, It's up to you how you would like to generate it or Use It
-
-
-### Valid SSL
-
-You need to have a domain pointing to your server IP address and ports 80 and 443 available to be listened to by the container for letsencrypt ACME challenge verification.
-
-for mor info view this link ...
-
-[Simplest HTTPS setup](https://leangaurav.medium.com/simplest-https-setup-nginx-reverse-proxy-letsencrypt-ssl-certificate-aws-cloud-docker-4b74569b3c61)
-
-
-### Not Valid SSL
-
-If you can't create one ( ports 80 and 443 are not available on your server, or you don't have a domain), a fallback script will generate a self-signed certificate for you inside the container. The only difference is a ***warning message about the certificate not being trusted*** when logging in.
 
 
 ## Edit docker-compse.yml & Run
-1- Download `docker-compose.yml`\
+1- Download `docker-compose.yml`
    ```
    wget https://raw.githubusercontent.com/Pezhvak/docker-ocserv/develop/docker-compose.yml
    ```
@@ -97,8 +80,27 @@ docker exec ocserv cat /etc/ocserv/data/ocpasswd
 - [Ubuntu](https://www.cisco.com/c/en/us/support/docs/smb/routers/cisco-rv-series-small-business-routers/Kmgmt-785-AnyConnect-Linux-Ubuntu.html)
 
 
+
+## `To use or not to use` VALID SSL Certficate
+
+you will need an SSL certificate, It's up to you how you would like to generate it or Use It
+
+
+### Valid SSL
+
+You need to have a domain pointing to your server IP address and ports 80 and 443 available to be listened to by the container for letsencrypt ACME challenge verification.
+
+for mor info view this link ...
+
+[Simplest HTTPS setup](https://leangaurav.medium.com/simplest-https-setup-nginx-reverse-proxy-letsencrypt-ssl-certificate-aws-cloud-docker-4b74569b3c61)
+
+
+### Not Valid SSL
+
+If you can't create one ( ports 80 and 443 are not available on your server, or you don't have a domain), a fallback script will generate a self-signed certificate for you inside the container. The only difference is a ***warning message about the certificate not being trusted*** when logging in.
+
+
 # References
 
-[cisco-anyconnect-server-docker
-](https://github.com/soreana/cisco-anyconnect-server-docker)
-[TommyLau/docker-ocserv](https://github.com/TommyLau/docker-ocserv)
+- [cisco-anyconnect-server-docker](https://github.com/soreana/cisco-anyconnect-server-docker)
+- [TommyLau/docker-ocserv](https://github.com/TommyLau/docker-ocserv)
