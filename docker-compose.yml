@@ -1,0 +1,18 @@
+version: '3.0'
+services:
+  ocserv:
+    image: rezabeigi/ocserv:latest
+    restart: always
+    container_name: ocserv
+    privileged: true
+    hostname: <IPorDNS>
+    ports:
+      - 443:443/udp
+      - 443:443
+    volumes:
+      - ./data:/etc/ocserv/data
+      #- ./config/ocserv.conf:/etc/ocserv/ocserv.conf
+      #- ./config/60-custom.conf:/etc/sysctl.d/60-custom.conf
+      #- /etc/letsencrypt/live/<EXAMPLE.com>/fullchain.pem:/etc/ocserv/server-cert.pem
+      #- /etc/letsencrypt/live/<EXAMPLE.com>/privkey.pem:/etc/ocserv/server-key.pem
+
