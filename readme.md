@@ -1,5 +1,4 @@
 ![Image Size](https://img.shields.io/docker/image-size/rezabeigi/ocserv)
-![li](https://img.shields.io/github/license/beigi-reza/docker-compose-ocserv/)
 ![Downloads](https://img.shields.io/docker/pulls/rezabeigi/ocserv)
 ![Build](https://img.shields.io/docker/automated/rezabeigi/ocserv)
 
