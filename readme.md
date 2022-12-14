@@ -20,10 +20,7 @@ OpenConnect VPN server (ocserv) is an Open Source SSL VPN server. for secure and
 
 
 ## Edit docker-compse.yml & Run
-1- Download `docker-compose.yml`
-   ```
-   wget https://raw.githubusercontent.com/Pezhvak/docker-ocserv/develop/docker-compose.yml
-   ```
+1- copy `docker-compose.yml` in your Server or clone project
 2- Replace the `<IPorDNS>` variable in docker-compse.yml with appropriate value.
 
 3- Uncommet & Edit `volume` related to certificate if use valid **SSL** 
